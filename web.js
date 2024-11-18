@@ -23,3 +23,12 @@ export class WebApp {
         })
     }
 }
+
+export function InitWebApp(portInput, prefixInput) {
+    class Web extends WebApp{
+        port = portInput
+        prefix = prefixInput
+    }
+    let App = new Web();
+    return App;
+}
